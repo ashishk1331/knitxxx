@@ -3,10 +3,10 @@ import { twMerge } from "tailwind-merge";
 import Avvvatars from "avvvatars-react";
 import { ArrowUp, ArrowDown } from "@phosphor-icons/react";
 
-export default function (props) {
+export default function Feed({ paths, page }) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 p-4 py-8">
-      {props.paths.map((path, index) => (
+      {paths.map((path, index) => (
         <Post src={path} key={index} />
       ))}
     </div>
